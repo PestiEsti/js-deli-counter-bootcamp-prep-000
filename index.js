@@ -20,8 +20,12 @@ function currentLine(line){
   } else {
     let output="The line is currently:"
     for(let i=0;i<line.length;i++) {
-      let place=i+1
-      output=output+" "+place+". "+line[i];
+      let place=i+1;
+      if (place==1) {
+        output=output+" "+place+". "+line[i];
+      } else {
+        output=output+", "+place+". "+line[i];
+      }
     }
     return(output);
   }
